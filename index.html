@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memórias Escolares - Guilherme Tavares</title>
     <link rel="stylesheet" href="css/estilização.css">
+    <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -39,7 +40,7 @@
         </div>
     </nav>
 
-    <!-- Conteúdo Principal - Linha do Tempo -->
+    <!-- Linha do Tempo -->
     <main class="container">
         
         <section class="section-title">
@@ -49,7 +50,6 @@
 
         <div class="timeline-grid">
             
-            <!-- 1. Interagino -->
             <article class="card interagino">
                 <div class="card-tag">Jardim de Infância</div>
                 <h3>Escola Interagino</h3>
@@ -63,7 +63,6 @@
                 </div>
             </article>
 
-            <!-- 2. Energia Ativa -->
             <article class="card energia">
                 <div class="card-tag">Ensino Fundamental I e II</div>
                 <h3>Escola Energia Ativa</h3>
@@ -72,12 +71,11 @@
                     <img src="assets/foto2.jpg" alt="Energia Ativa" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80'">
                 </div>
                 <div class="card-body">
-                    <p><strong>Relato da Fase:</strong> Pasei grande parte da infância e transição para a adolescência no Energia Ativa. Estudei lá até o 8º ano, onde vivi momentos marcantes com amigos e aprendizados de matérias mais avançadas.</p>
+                    <p><strong>Relato da Fase:</strong> Passei grande parte da infância e transição para a adolescência no Energia Ativa. Estudei lá até o 8º ano, onde vivi momentos marcantes com amigos e aprendizados de matérias mais avançadas.</p>
                     <p class="historia-marcante"><strong><i class="fa-solid fa-star"></i> História Marcante:</strong> Durante a Feira de Ciências no 7º ano, nosso grupo fez um vulcão com vinagre e bicarbonato. Colocamos o dobro dos ingredientes sem querer e a espuma subiu tanto que atingiu o teto da sala de aula!</p>
                 </div>
             </article>
 
-            <!-- 3. Senhora de Fátima -->
             <article class="card fatima">
                 <div class="card-tag">Transição</div>
                 <h3>Colégio Senhora de Fátima</h3>
@@ -91,7 +89,6 @@
                 </div>
             </article>
 
-            <!-- 4. Colégio Estadual Inês -->
             <article class="card ines">
                 <div class="card-tag">Ensino Fundamental / Médio</div>
                 <h3>Colégio Estadual Inês</h3>
@@ -105,7 +102,6 @@
                 </div>
             </article>
 
-            <!-- 5. Colégio Teobaldo -->
             <article class="card teobaldo">
                 <div class="card-tag">Ensino Médio</div>
                 <h3>Colégio Teobaldo</h3>
@@ -119,7 +115,6 @@
                 </div>
             </article>
 
-            <!-- 6. Colégio Morelli -->
             <article class="card morelli">
                 <div class="card-tag">Formando 3º Ano</div>
                 <h3>Colégio Morelli</h3>
@@ -135,15 +130,14 @@
 
         </div>
 
-        <!-- SEÇÃO DE REDAÇÕES -->
+        <!-- SEÇÃO DE REDAÇÕES (CARREGADAS PELO JAVASCRIPT) -->
         <section id="redacoes" class="section-title">
             <h2><i class="fa-solid fa-pen-nib"></i> Coletânea de Redações (Guilherme Tavares)</h2>
             <p>Selecione qualquer uma das 12 redações produzidas para ler na íntegra no leitor interativo.</p>
         </section>
 
-        <div class="redacoes-grid" id="gridRedacoes">
-            <!-- Cards de Redação injetados dinamicamente via JS -->
-        </div>
+        <!-- O Javascript vai inserir os 12 cards aqui dentro -->
+        <div class="redacoes-grid" id="gridRedacoes"></div>
 
         <!-- CÁPSULA DO TEMPO / RECADO -->
         <section class="interativo">
@@ -160,9 +154,7 @@
                 <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Registrar Memória</button>
             </form>
 
-            <div id="listaRecados" class="recados-container">
-                <!-- Recados serão adicionados via Javascript -->
-            </div>
+            <div id="listaRecados" class="recados-container"></div>
         </section>
 
     </main>
@@ -174,9 +166,7 @@
             <span id="modalCategory" class="card-tag">Redação</span>
             <h2 id="modalTitle">Título da Redação</h2>
             <hr>
-            <div id="modalBody" class="modal-body">
-                <!-- Texto da redação carregado dinamicamente -->
-            </div>
+            <div id="modalBody" class="modal-body"></div>
         </div>
     </div>
 
@@ -185,6 +175,7 @@
         <p>Desenvolvido por <strong>Guilherme Tavares</strong> • Projeto de Conclusão de Programação Web • Colégio Morelli</p>
     </footer>
 
+    <!-- Liga o ficheiro JavaScript com a lista de redações -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
