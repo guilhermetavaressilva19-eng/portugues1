@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memórias Escolares - Guilherme Tavares</title>
     <link rel="stylesheet" href="css/estilização.css">
-    <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header & Perfil -->
     <header class="hero">
         <div class="overlay">
             <div class="hero-content">
@@ -26,7 +24,6 @@
         </div>
     </header>
 
-    <!-- Navegação / Filtros -->
     <nav class="nav-bar">
         <div class="nav-container">
             <button class="nav-btn active" onclick="filtrarEscola('todas')">Todas as Escolas</button>
@@ -40,7 +37,6 @@
         </div>
     </nav>
 
-    <!-- Linha do Tempo -->
     <main class="container">
         
         <section class="section-title">
@@ -49,7 +45,6 @@
         </section>
 
         <div class="timeline-grid">
-            
             <article class="card interagino">
                 <div class="card-tag">Jardim de Infância</div>
                 <h3>Escola Interagino</h3>
@@ -127,19 +122,22 @@
                     <p class="historia-marcante"><strong><i class="fa-solid fa-star"></i> História Marcante:</strong> O desenvolvimento deste site interativo reunindo toda a minha trajetória desde o Jardim de Infância no Interagino e todas as minhas redações do ano para fechar com chave de ouro o Ensino Médio!</p>
                 </div>
             </article>
-
         </div>
 
-        <!-- SEÇÃO DE REDAÇÕES (CARREGADAS PELO JAVASCRIPT) -->
+        <!-- SEÇÃO DE REDAÇÕES EM CARROSSEL HORIZONTAL -->
         <section id="redacoes" class="section-title">
             <h2><i class="fa-solid fa-pen-nib"></i> Coletânea de Redações (Guilherme Tavares)</h2>
-            <p>Selecione qualquer uma das 12 redações produzidas para ler na íntegra no leitor interativo.</p>
+            <p>Deslize para os lados para navegar entre as 12 redações produzidas.</p>
         </section>
 
-        <!-- O Javascript vai inserir os 12 cards aqui dentro -->
-        <div class="redacoes-grid" id="gridRedacoes"></div>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn btn-left" onclick="scrollRedacoes(-320)"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="redacoes-carousel" id="gridRedacoes">
+                <!-- Cards de Redação injetados via JS -->
+            </div>
+            <button class="carousel-btn btn-right" onclick="scrollRedacoes(320)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
 
-        <!-- CÁPSULA DO TEMPO / RECADO -->
         <section class="interativo">
             <h3><i class="fa-solid fa-box-archive"></i> Cápsula do Tempo - Deixe sua Memória</h3>
             <p class="sub-interativo">Envie uma mensagem de recordação sobre a trajetória do Guilherme!</p>
@@ -159,7 +157,6 @@
 
     </main>
 
-    <!-- Modal para Leitura Completa das Redações -->
     <div id="modalRedacao" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="fecharModal()">&times;</span>
@@ -170,12 +167,10 @@
         </div>
     </div>
 
-    <!-- Rodapé -->
     <footer>
         <p>Desenvolvido por <strong>Guilherme Tavares</strong> • Projeto de Conclusão de Programação Web • Colégio Morelli</p>
     </footer>
 
-    <!-- Liga o ficheiro JavaScript com a lista de redações -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
